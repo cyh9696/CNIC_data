@@ -1,17 +1,17 @@
-﻿function pie1(mychart, a) {
+function pie4(mychart, a) {
     option = {
         //backgroundColor: '#333333',
         title: {
-            text: '研究单位系统安全检查情况',
+            text: '研究单位无线路由隔离情况',
             left: 'center',
             top: 8,
-            bottom: -2,
+            bottom: -7,
             textStyle: {
                 color: '#020202',
                 fontSize:'150%'
             }
         },
-        color: ['#FFAE57', '#cc6025', '#EA5151', '#FF7853', '#ebdba4'],
+        color: ['#FFAE57', '#EA5151', '#ebdba4'],
 
         tooltip: {
             trigger: 'item',
@@ -22,7 +22,7 @@
         legend: {
             left: 'center',
             top: 'bottom',
-            data: ['1~2次', '3~5次', '6~10次', '大于10次']
+            data: ['完全隔离', '无需隔离', '未隔离']
         },
         dataset: {
             source: []
@@ -47,19 +47,14 @@
                     }
                 }
             },
-            emphasis:{
-                label:{
-                    show:true
-                }
-            },
             // labelLine: {
             //     normal: {
             //         lineStyle: {
             //             color: '#020202'
             //         },
             //         smooth: 0.2,
-            //         length: 5,
-            //         length2: 10
+            //         length: 10,
+            //         length2: 20
             //     }
             // },
             itemStyle: {
@@ -70,7 +65,7 @@
                 }
             },
 
-            //animationType: 'espension',
+            animationType: 'espension',
 
             animationDelay: function(idx) {
                 return Math.random() * 200;
@@ -88,7 +83,7 @@
         //alert(data.security);
         mychart.setOption({
             dataset: {
-                source: data.pie1,
+                source: data.pie4,
             },
 
         });
