@@ -1,9 +1,8 @@
-﻿function pie1(mychart, a) {
-
+function pie2(mychart, a) {
     option = {
         //backgroundColor: '#333333',
         title:{
-            text:'研究单位网络与信息安全认证、标准或规范情',
+            text:'研究单位信息系统安全检查情况',
 
             x:'center',//水平位置：居中
             bottom:-3,//垂直位置：底部
@@ -13,8 +12,7 @@
             },
             lineHeight:25,
         },
-
-        color: ['#FFAE57', '#EA5151', '#ebdba4', '#893448', '#b86f56', '#FF7853'],
+        color: ['#FFAE57', '#EA5151', '#ebdba4', '#893448', '#FF7853', ],
 
         tooltip: {
             trigger: 'item',
@@ -25,7 +23,7 @@
         legend: {
             left: 10,
             orient: 'vertical',
-            data: ['等保一级', '等保二级', '等保三级', '军工二级','涉密二级','其他']
+            data: ['1~2次', '3~5次', '6~10次', '大于10次']
         },
         dataset: {
             source: []
@@ -86,7 +84,7 @@
         //alert(data.security);
         mychart.setOption({
             dataset: {
-                source: data.pie1,
+                source: data.pie2,
             },
 
         });

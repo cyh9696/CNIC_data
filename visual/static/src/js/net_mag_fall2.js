@@ -1,15 +1,15 @@
-﻿function fall1(mychart, a) {
+function fall2(mychart, a) {
     option = {
         title:{
-         text:'研究单位无线网络安全防护措施',
+            text:'研究单位网络安全审计情况',
 
-         x:'center',//水平位置：居中
-          bottom:0,//垂直位置：底部
-          textStyle: {
-              color: '#020202',
-              fontSize: a * 0.013
-          },
-          lineHeight:25,
+            x:'center',//水平位置：居中
+            bottom:0,//垂直位置：底部
+            textStyle: {
+                color: '#020202',
+                fontSize: a * 0.013
+            },
+            lineHeight:25,
         },
 
         tooltip: {
@@ -23,8 +23,7 @@
 
         },
         grid: {
-            containLabel: true,
-
+            containLabel: true
         },
         yAxis: {
             data: [],
@@ -36,7 +35,7 @@
             axisLabel: {
                 textStyle: {
                     fontSize: a * 0.008,
-                    lineHeight: a * 0.01,
+                    lineHeight: a * 0.01
                 }
             },
             axisTick: {
@@ -78,7 +77,8 @@
                 }
             },
             splitNumber: 5,
-            interval: 14,
+            interval: 22,
+            max: 110,
             splitLine: {
                 show: true,
                 lineStyle: {
@@ -93,7 +93,7 @@
             type: 'bar',
             data: [],
             itemStyle: {
-                color: '#FFAE57',
+                color: '#FF7853',
                 opacity: 0.85,
 
             },
@@ -120,12 +120,12 @@
             yAxis: [
 
                 {
-                    data: data.bar1, //类目数据（在类目轴中有效）
+                    data: data.bar2, //类目数据（在类目轴中有效）
                 }
             ],
 
             series: [{
-                data: data.bar1_value,
+                data: data.bar2_value,
             }]
         });
 
